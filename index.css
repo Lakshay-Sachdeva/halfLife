@@ -1,0 +1,55 @@
+body {
+  width: 60%;
+  text-align: center;
+  margin: 10vh auto;
+  background: linear-gradient(0.25turn, #ffe100, #c9d886, #9b8a2c);
+}
+
+h1 {
+  font-size: 42px;
+}
+h3 {
+  font-weight: 600;
+  font-size: 20px;
+  color: rgb(36, 41, 60);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 100px auto;
+  gap: 20px;
+  font-size: 18px;
+  width: 50%;
+  line-height: 24px;
+}
+
+.sub {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sub input {
+  padding: 5px;
+  font-size: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+form input[type="submit"] {
+  font-size: 18px;
+  color: rgba(18, 55, 94, 0.898);
+  padding: 4px 8px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: rgb(35, 189, 35);
+}
+
+#result {
+  font-size: 24px;
+  line-height: 24px;
+  margin: 100px auto auto;
+}

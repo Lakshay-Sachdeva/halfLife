@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hlf Life</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Half Life</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
     <h1>Half Life Calculator</h1>
-    <h4></h4>
-    
-</body>
+    <h3>
+      Calculate the remaining weightof radioactive element left after number of
+      days under variable conditions
+    </h3>
+    <form onSubmit="">
+      <div class="sub">
+        <label>Initial Weight</label>
+        <input
+          type="text"
+          id="initialWeight"
+          placeholder="Enter weight in grams"
+        />
+      </div>
+      <div class="sub">
+        <label>Daily Weight (if any)</label>
+        <input
+          type="text"
+          id="dailyWeight"
+          placeholder="Enter weight in array"
+        />
+      </div>
+      <div class="sub">
+        <label>Number of Days</label>
+        <input
+          type="text"
+          id="numberOsDays"
+          placeholder="Enter number of Days"
+        />
+      </div>
+      <input type="submit" value="Calculate" />
+    </form>
+    <div id="result"></div>
+  </body>
 </html>
+<script type="module"></script>
