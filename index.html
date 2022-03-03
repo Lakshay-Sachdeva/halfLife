@@ -13,7 +13,7 @@
       Calculate the remaining weightof radioactive element left after number of
       days under variable conditions
     </h3>
-    <form onSubmit="">
+    <div id="form">
       <div class="sub">
         <label>Initial Weight</label>
         <input
@@ -34,13 +34,42 @@
         <label>Number of Days</label>
         <input
           type="text"
-          id="numberOsDays"
+          id="numberOfDays"
           placeholder="Enter number of Days"
         />
       </div>
-      <input type="submit" value="Calculate" />
-    </form>
+      <button id="submit" onclick="printResult()">Calulate</button>
+    </div>
     <div id="result"></div>
   </body>
 </html>
-<script type="module"></script>
+<script>
+  function calcHalf() {
+    let startWeight = document.getElementById("initialWeight").value;
+    let dailyWeight = document.getElementById("dailyWeight").value;
+    let nDays = document.getElementById("numberOfDays").value;
+    if (startWeight !== "" && dailyWeight !== "" && nDays !== "") {
+      dailyWeight = dailyWeight.trim().split(" ").map(Number);
+      return calculate(startWeight, dailyWeight, nDays);
+    } else {
+      alert("Please enter valid values");
+    }
+  }
+
+  const calculate = (sw, dw, days) => {
+    let weight = sw;
+    for (let i = 0; i < days; i++) {
+      weight = weight / 2 + dw[i % dw.length];
+    }
+    return weight;
+  };
+
+  const printResult = () => {
+    let result = calcHalf();
+
+    let resultDiv = document.getElementById("result");
+    resultDiv.innerText = `Resultant weight after decay of ${
+      document.getElementById("dailyWeight").value
+    } days is : ${result}`;
+  };
+</script>
